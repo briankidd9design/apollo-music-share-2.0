@@ -128,11 +128,15 @@ function AddSong() {
   }
 //NEED TO FIX THIS ERROR HANDLER
   function handleError(field) {
+    // if (field === ''){
+    //   return "Fill Out field";
+    // }
     return error?.graphQLErrors[0]?.extensions?.path.includes(field);
   }
 
   const { thumbnail, title, artist } = song;
-  console.dir(error);
+  console.dir({error});
+  
   return (
     <div className={classes.container}>
       <Dialog
